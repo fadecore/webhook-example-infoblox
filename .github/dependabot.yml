@@ -9,6 +9,10 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "weekly"
+    allow:
+      # Allow updates for infoblox, as we can control it. Everything else depends on cert-manager go version
+      - dependency-name: "infoblox*"
+      - dependency-name: "cert-manager"
   # Enable version updates for Docker
   - package-ecosystem: "docker"
     # Look for a `Dockerfile` in the `root` directory
