@@ -69,10 +69,13 @@ jobs:
 
       - name: Install Helm
         uses: azure/setup-helm@5119fcb9089d432beecbf79bb2c7915207344b78 # v3.5
+        with:
+          version: 'latest' # default is latest (stable)
+          token: ${{ secrets.GITHUB_TOKEN }} # only needed if version is 'latest'
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@a917fd15b20e8b64b94d9158ad54cd6345335584 # v1.6.0
         with:
           charts_dir: deploy
         env:
-          CR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
