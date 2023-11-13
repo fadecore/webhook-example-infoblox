@@ -16,6 +16,7 @@ jobs:
   release-docker-image:
     # Source https://github.com/docker/build-push-action
     runs-on: ubuntu-latest
+    permissions:
       contents: read
       packages: write
       # This is used to complete the identity challenge
