@@ -8,7 +8,7 @@ replace github.com/cert-manager/cert-manager => github.com/cert-manager/cert-man
 
 require (
 	github.com/cert-manager/cert-manager v1.11.0
-	github.com/infobloxopen/infoblox-go-client/v2 v2.1.1
+	github.com/infobloxopen/infoblox-go-client/v2 v2.4.0
 	github.com/miekg/dns v1.1.50
 	github.com/stretchr/testify v1.8.4
 	k8s.io/apiextensions-apiserver v0.26.0
